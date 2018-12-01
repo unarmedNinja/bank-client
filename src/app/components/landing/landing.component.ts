@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {CofirmComponent} from "../cofirm/cofirm.component"
+import {MatDialog} from '@angular/material';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(CofirmComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+      this.router.navigate(['/cibc']);
+    });
   }
 
 }

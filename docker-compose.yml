@@ -1,0 +1,13 @@
+version: '2.2'
+
+services:
+  beavr-client:
+    container_name: beavr-client
+    image: dev/beavr-client
+    build: 
+      context: .
+      network: host
+    ports:
+      - "4200:80"
+    extra_hosts:
+      - "cloudvps:45.62.246.57"

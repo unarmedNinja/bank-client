@@ -6,6 +6,7 @@ import { ListViewComponent } from './list-view/list-view.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { CibcComponent } from "./components/cibc/cibc.component";
 import { LandingComponent } from "./components/landing/landing.component";
+import { DocumentsComponent } from "./components/documents/documents.component"
 
 //services
 import { TodosService } from './services/todos.service';
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'list', component: ListViewComponent},
   { path: 'todo/:id', component: TodoComponent},
   { path: 'cibc', component: CibcComponent},
-  { path: 'landing', component: LandingComponent}
+  { path: 'landing', component: LandingComponent},
+  { path: 'documents', component: DocumentsComponent}
 ];
 
 @NgModule({

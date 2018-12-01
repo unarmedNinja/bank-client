@@ -10,11 +10,14 @@ import { AppNavComponent } from './app-nav/app-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule } from '@angular/material';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDialogModule} from '@angular/material/dialog';
 import { ListViewComponent } from './list-view/list-view.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { FormsModule } from '@angular/forms';
 import { CibcComponent } from './components/cibc/cibc.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { DocumentsComponent } from './components/documents/documents.component';
+import { CofirmComponent } from './components/cofirm/cofirm.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { LandingComponent } from './components/landing/landing.component';
     ListViewComponent,
     TodoComponent,
     CibcComponent,
-    LandingComponent
+    LandingComponent,
+    DocumentsComponent,
+    CofirmComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +44,11 @@ import { LandingComponent } from './components/landing/landing.component';
     HttpClientModule,
     FormsModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CofirmComponent]
 })
 export class AppModule { }
