@@ -12,6 +12,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { ListViewComponent } from './list-view/list-view.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { FormsModule } from '@angular/forms';
+import { CibcComponent } from './components/cibc/cibc.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AppNavComponent,
     ListViewComponent,
-    TodoComponent
+    TodoComponent,
+    CibcComponent
   ],
   imports: [
     BrowserModule,

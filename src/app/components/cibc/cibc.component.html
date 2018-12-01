@@ -1,0 +1,26 @@
+<div>
+
+<p>available accounts: </p>  
+  <table>
+
+    <tr *ngFor="let account of accounts">
+      <td>{{ account.type }}</td>
+      <td>{{ account.label }}</td>
+      <td>{{ account.balance.funds_available }} {{ account.balance.currency }}</td>
+      
+    </tr>
+  </table>
+</div>
+
+<div *ngIf="pay.payStatements && pay">
+  <p>pay statements:</p>
+  <table>
+    <tr *ngFor="let statement of pay.payStatements">
+      <td>{{statement.payDate }}</td>
+      <td>{{statement.grossPayAmount.amountValue}} {{ statement.grossPayAmount.currencyCode }}</td>
+    </tr>
+  </table>
+</div>
+<p>
+  income : {{ income | json }}
+</p>
