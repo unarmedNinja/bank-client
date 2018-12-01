@@ -1,4 +1,5 @@
 export class IncomeLine {
     line: string;
-    value: string;
+    description: string;
+    amount:string;
 }

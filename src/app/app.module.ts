@@ -8,11 +8,13 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppNavComponent } from './app-nav/app-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule } from '@angular/material';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { ListViewComponent } from './list-view/list-view.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { FormsModule } from '@angular/forms';
 import { CibcComponent } from './components/cibc/cibc.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { CibcComponent } from './components/cibc/cibc.component';
     AppNavComponent,
     ListViewComponent,
     TodoComponent,
-    CibcComponent
+    CibcComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,9 @@ import { CibcComponent } from './components/cibc/cibc.component';
     MatIconModule,
     MatListModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

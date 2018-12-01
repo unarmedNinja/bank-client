@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { CibcComponent } from "./components/cibc/cibc.component";
+import { LandingComponent } from "./components/landing/landing.component";
 
 //services
 import { TodosService } from './services/todos.service';
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'list', component: ListViewComponent},
   { path: 'todo/:id', component: TodoComponent},
-  { path: 'cibc', component: CibcComponent}
+  { path: 'cibc', component: CibcComponent},
+  { path: 'landing', component: LandingComponent}
 ];
 
 @NgModule({
