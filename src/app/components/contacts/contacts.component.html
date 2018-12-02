@@ -1,3 +1,72 @@
-<p>
-  contacts works!
-</p>
+<h4>Contacts</h4>
+      <mat-accordion class="requiredDocTable example-headers-align">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Financial Advisor
+              </mat-panel-title>
+              <mat-panel-description>
+                Spencer Strasmore
+
+                
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+        
+    <table>
+      <tr>
+        <td>Phone</td>
+        <td>416-111-2222</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>161 Bay</td>
+      </tr>
+    </table>
+  </mat-expansion-panel>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+    <mat-panel-title>
+       Lawyer
+      </mat-panel-title>
+      <mat-panel-description>
+        Saul Goodman
+      
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <table>
+      <tr>
+        <td>Phone</td>
+        <td>416-111-2222</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>161 Bay</td>
+      </tr>
+    </table>
+  </mat-expansion-panel>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+    <mat-panel-title>
+       Real Estate Agent
+      </mat-panel-title>
+      <mat-panel-description>
+        Phil Dunphy
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <table>
+      <tr>
+        <td>Phone</td>
+        <td>416-111-2222</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>161 Bay</td>
+      </tr>
+    </table>
+  </mat-expansion-panel>
+      </mat-accordion>
+      <p>
+        <button mat-button><mat-icon>add_circle_outline</mat-icon>Add New Contact</button>
+      </p>
