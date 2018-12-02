@@ -7,23 +7,30 @@
         <li>step 3</li>
         <li>step 4</li>
     </ul>
-
-<div>
-
-<p>available accounts: </p>  
-  <table>
-
-    <tr *ngFor="let account of accounts">
-      <td>{{ account.type }}</td>
-      <td>{{ account.label }}</td>
-      <td>{{ account.balance.funds_available }} {{ account.balance.currency }}</td>
-      
-    </tr>
-  </table>
 </div>
 
+<table class="requiredDocTable">
+<tr>
+  <td>Accounts</td>
+  <td>
+    <div>
+    <table>
+      <tr *ngFor="let account of accounts">
+        <td>{{ account.type }}</td>
+        <td>{{ account.label }}</td>
+        <td>{{ account.balance.funds_available }} {{ account.balance.currency }}</td>
+      </tr>
+    </table>
+    </div>
+    </td>
+    <td>
+        <mat-chip color="primary" selected>Completed</mat-chip>
+    </td>
+</tr>
+<tr>
+<td>Pay Stub</td>
+<td>
 <div *ngIf="pay.payStatements && pay">
-  <p>pay statements:</p>
   <table>
     <tr *ngFor="let statement of pay.payStatements">
       <td>{{statement.payDate }}</td>
@@ -31,6 +38,14 @@
     </tr>
   </table>
 </div>
+</td>
+<td>
+<mat-chip color="primary" selected>Completed</mat-chip>
+</td>
+</tr>
+<tr>
+<td>T4 Income</td>
+<td>
 <div>
   <p>CRA Notice of Assessment</p>
 
@@ -41,3 +56,9 @@
         <td>{{line.amount }}</td>
     </table>  
   </div>
+  </td>
+  <td>
+      <mat-chip color="primary" selected>Completed</mat-chip>
+      </td>
+  </tr>
+</table>

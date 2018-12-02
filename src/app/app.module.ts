@@ -11,6 +11,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule } from '@angular/material';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatChipsModule} from '@angular/material/chips';
+
 import { ListViewComponent } from './list-view/list-view.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { FormsModule } from '@angular/forms';
@@ -18,6 +20,7 @@ import { CibcComponent } from './components/cibc/cibc.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { DocumentsComponent } from './components/documents/documents.component';
 import { CofirmComponent } from './components/cofirm/cofirm.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { CofirmComponent } from './components/cofirm/cofirm.component';
     CibcComponent,
     LandingComponent,
     DocumentsComponent,
-    CofirmComponent
+    CofirmComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,8 @@ import { CofirmComponent } from './components/cofirm/cofirm.component';
     FormsModule,
     MatCardModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
