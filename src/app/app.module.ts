@@ -13,6 +13,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDividerModule} from '@angular/material/divider';
 import { ListViewComponent } from './list-view/list-view.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { FormsModule } from '@angular/forms';
@@ -24,6 +25,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SummaryComponent } from './components/summary/summary.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { ReviewComponent } from './components/review/review.component';
+import { ApproveComponent } from './components/approve/approve.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,9 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     LoginComponent,
     SummaryComponent,
     ProfileComponent,
-    ContactsComponent
+    ContactsComponent,
+    ReviewComponent,
+    ApproveComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +62,8 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     MatGridListModule,
     MatDialogModule,
     MatChipsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

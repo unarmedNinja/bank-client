@@ -20,34 +20,34 @@
       <tr mat-row>
         <td>1 Year</td>
         <td>3.54%</td>
-        <td><button mat-button>select</button></td>
+        <td><button mat-button (click)="showMortgage()"><mat-icon>radio_button_unchecked</mat-icon></button></td>
       </tr>
       <tr mat-row>
           <td>2 Year</td>
           <td>3.64%</td>
-          <td></td>
+          <td><button mat-button><mat-icon>radio_button_unchecked</mat-icon></button></td>
         </tr>
         <tr mat-row>
             <td>3 Year</td>
             <td>3.74%</td>
-            <td></td>
+            <td><button mat-button><mat-icon>radio_button_unchecked</mat-icon></button></td>
           </tr>
           <tr mat-row>
               <td>4 Year</td>
               <td>3.84%</td>
-              <td></td>
+              <td><button mat-button><mat-icon>radio_button_unchecked</mat-icon></button></td>
             </tr>
             <tr mat-ro>
                 <td>5 Year</td>
                 <td>5.54%</td>
-                <td></td>
+                <td><button mat-button><mat-icon>radio_button_unchecked</mat-icon></button></td>
               </tr>
     </table>
 
-<div>
+<div *ngIf="doShowMortgage">
   <img src="../../../assets/mortgage.amount.png" width="640" height="480">
 </div>
-
+<mat-divider></mat-divider>
     <div>
         <button mat-button (click)="back()">back</button>
         <button mat-button (click)="next()">next</button>

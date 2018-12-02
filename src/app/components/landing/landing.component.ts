@@ -9,8 +9,11 @@ import {Router} from '@angular/router';
   styleUrls: ['./landing.component.sass']
 })
 export class LandingComponent implements OnInit {
+  
 
-  constructor(public dialog: MatDialog, private router: Router) { }
+  constructor(public dialog: MatDialog, private router: Router) {
+    
+   }
 
   ngOnInit() {
   }
@@ -23,5 +26,4 @@ export class LandingComponent implements OnInit {
       this.router.navigate(['/cibc']);
     });
   }
-
 }

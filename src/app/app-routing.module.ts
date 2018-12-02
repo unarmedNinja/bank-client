@@ -11,6 +11,8 @@ import { LoginComponent } from "./components/login/login.component"
 import { SummaryComponent} from "./components/summary/summary.component";
 import { ProfileComponent} from "./components/profile/profile.component";
 import {ContactsComponent} from "./components/contacts/contacts.component";
+import {ReviewComponent} from "./components/review/review.component";
+import {ApproveComponent} from "./components/approve/approve.component";
 
 //services
 import { TodosService } from './services/todos.service';
@@ -27,7 +29,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'summary', component: SummaryComponent},
   { path: 'profile', component: ProfileComponent},
-  { path: 'contacts', component: ContactsComponent}
+  { path: 'contacts', component: ContactsComponent},
+  { path: 'review', component: ReviewComponent},
+  { path: 'approve', component: ApproveComponent}
 ];
 
 @NgModule({

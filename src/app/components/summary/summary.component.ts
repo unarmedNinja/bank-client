@@ -7,8 +7,10 @@ import {Router} from '@angular/router';
   styleUrls: ['./summary.component.sass']
 })
 export class SummaryComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  doShowMortgage: boolean;
+  constructor(private router: Router) { 
+    this.doShowMortgage = false;
+  }
 
   ngOnInit() {
   }
@@ -18,6 +20,10 @@ export class SummaryComponent implements OnInit {
   } 
 
   next() {
-    this.router.navigate(['/summary']);
-  } 
+    this.router.navigate(['/review']);
+  }
+  
+  showMortgage() {
+    this.doShowMortgage = true;
+  }
 }
