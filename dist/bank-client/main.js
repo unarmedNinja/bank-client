@@ -1325,7 +1325,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var CibcService = /** @class */ (function () {
     function CibcService(http) {
         this.http = http;
-        this.cibcApi = "http://localhost:3000/cibc/";
+        this.cibcApi = "http://bankapi:3000/cibc/";
         this.accountUri = "accounts";
         this.payUri = "pay";
         this.incomeUri = "income";

@@ -9,7 +9,7 @@ import { RootAccountObject } from "../models/accounts";
   providedIn: 'root'
 })
 export class CibcService {
-  private cibcApi = "http://localhost:3000/cibc/";
+  private cibcApi = "http://bankapi:3000/cibc/";
   private accountUri = "accounts";
   private payUri = "pay";
   private incomeUri = "income";
