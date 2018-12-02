@@ -9,11 +9,20 @@
     </ul>
 </div>
 
-<table class="requiredDocTable">
-<tr>
-  <td>Accounts</td>
-  <td>
-    <div>
+    <h4>Required Documents</h4>
+      <mat-accordion class="requiredDocTable example-headers-align">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Accounts
+              </mat-panel-title>
+              <mat-panel-description>
+                Bank Account Details
+
+                <mat-icon class="green-icon">check_box</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+        
     <table>
       <tr *ngFor="let account of accounts">
         <td>{{ account.type }}</td>
@@ -21,44 +30,47 @@
         <td>{{ account.balance.funds_available }} {{ account.balance.currency }}</td>
       </tr>
     </table>
-    </div>
-    </td>
-    <td>
-        <mat-chip color="primary" selected>Completed</mat-chip>
-    </td>
-</tr>
-<tr>
-<td>Pay Stub</td>
-<td>
-<div *ngIf="pay.payStatements && pay">
-  <table>
-    <tr *ngFor="let statement of pay.payStatements">
-      <td>{{statement.payDate }}</td>
-      <td>{{statement.grossPayAmount.amountValue}} {{ statement.grossPayAmount.currencyCode }}</td>
-    </tr>
-  </table>
-</div>
-</td>
-<td>
-<mat-chip color="primary" selected>Completed</mat-chip>
-</td>
-</tr>
-<tr>
-<td>T4 Income</td>
-<td>
-<div>
-  <p>CRA Notice of Assessment</p>
+  </mat-expansion-panel>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+    <mat-panel-title>
+        Pay Stub
+      </mat-panel-title>
+      <mat-panel-description>
+        Payroll Details
 
-  <table>
-      <tr *ngFor="let line of income">
-        <td>{{line.line }}</td>
-        <td>{{line.description}}</td>
-        <td>{{line.amount }}</td>
-    </table>  
-  </div>
-  </td>
-  <td>
-      <mat-chip color="primary" selected>Completed</mat-chip>
-      </td>
-  </tr>
-</table>
+        <mat-icon class="green-icon">check_box</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div *ngIf="pay.payStatements && pay">
+        <table>
+          <tr *ngFor="let statement of pay.payStatements">
+            <td>{{statement.payDate }}</td>
+            <td>{{statement.grossPayAmount.amountValue}} {{ statement.grossPayAmount.currencyCode }}</td>
+          </tr>
+        </table>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+    <mat-panel-title>
+        T4 Income
+      </mat-panel-title>
+      <mat-panel-description>
+          CRA Notice of Assessment
+        <mat-icon class="green-icon">check_box</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <table>
+        <tr *ngFor="let line of income">
+          <td>{{line.line }}</td>
+          <td>{{line.description}}</td>
+          <td>{{line.amount }}</td>
+      </table> 
+    </mat-expansion-panel>
+</mat-accordion>
+<div>
+  <button mat-button>Submit</button>
+</div>
