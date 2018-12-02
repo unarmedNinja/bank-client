@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { RootPayObject } from "../../models/pay";
 import { RootAccountObject } from "../../models/accounts";
 import { IncomeLine } from "../../models/income.line";
- 
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-cibc',
@@ -16,7 +16,7 @@ export class CibcComponent implements OnInit {
   private pay;
   private income;
 
-  constructor(private route: ActivatedRoute, private cibcService: CibcService) { 
+  constructor(private route: ActivatedRoute, private cibcService: CibcService, private router: Router) { 
     this.pay = {};
     this.accounts = [];
     this.income = [];
@@ -39,4 +39,8 @@ export class CibcComponent implements OnInit {
   getIncome() : void {
     this.cibcService.getIncome().subscribe(income => this.income = income);
   }
+
+  next() {
+    this.router.navigate(['/summary']);
+  } 
 }

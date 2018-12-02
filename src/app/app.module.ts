@@ -21,6 +21,9 @@ import { LandingComponent } from './components/landing/landing.component';
 import { DocumentsComponent } from './components/documents/documents.component';
 import { CofirmComponent } from './components/cofirm/cofirm.component';
 import { LoginComponent } from './components/login/login.component';
+import { SummaryComponent } from './components/summary/summary.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { LoginComponent } from './components/login/login.component';
     LandingComponent,
     DocumentsComponent,
     CofirmComponent,
-    LoginComponent
+    LoginComponent,
+    SummaryComponent,
+    ProfileComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,

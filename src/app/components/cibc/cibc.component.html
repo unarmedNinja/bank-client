@@ -38,8 +38,7 @@
         Pay Stub
       </mat-panel-title>
       <mat-panel-description>
-        Payroll Details
-
+        Payroll Details (ADP)
         <mat-icon class="green-icon">check_box</mat-icon>
       </mat-panel-description>
     </mat-expansion-panel-header>
@@ -70,7 +69,20 @@
           <td>{{line.amount }}</td>
       </table> 
     </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+    <mat-panel-title>
+       Credit Score
+      </mat-panel-title>
+      <mat-panel-description>
+          Equifax
+        <mat-icon class="green-icon">check_box</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+     Credit Score is 800
+    </mat-expansion-panel>
 </mat-accordion>
 <div>
-  <button mat-button>Submit</button>
+  <button mat-button (click)="next()">Submit</button>
 </div>

@@ -1,0 +1,54 @@
+<h3>Documents</h3>
+
+<div class="container">
+    <ul class="progressbar">
+        <li>step 1</li>
+        <li class="active">step 2</li>
+        <li>step 3</li>
+        <li>step 4</li>
+    </ul>
+</div>
+
+    <h4>Pre Approval Amount</h4>
+
+    <table mat-table>
+      <tr mat-header-row>
+        <td>Term</td>
+        <td>Rate</td>
+        <td></td>
+      </tr>
+      <tr mat-row>
+        <td>1 Year</td>
+        <td>3.54%</td>
+        <td><button mat-button>select</button></td>
+      </tr>
+      <tr mat-row>
+          <td>2 Year</td>
+          <td>3.64%</td>
+          <td></td>
+        </tr>
+        <tr mat-row>
+            <td>3 Year</td>
+            <td>3.74%</td>
+            <td></td>
+          </tr>
+          <tr mat-row>
+              <td>4 Year</td>
+              <td>3.84%</td>
+              <td></td>
+            </tr>
+            <tr mat-ro>
+                <td>5 Year</td>
+                <td>5.54%</td>
+                <td></td>
+              </tr>
+    </table>
+
+<div>
+  <img src="../../../assets/mortgage.amount.png" width="640" height="480">
+</div>
+
+    <div>
+        <button mat-button (click)="back()">back</button>
+        <button mat-button (click)="next()">next</button>
+      </div>

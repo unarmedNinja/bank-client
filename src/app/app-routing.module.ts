@@ -8,6 +8,9 @@ import { CibcComponent } from "./components/cibc/cibc.component";
 import { LandingComponent } from "./components/landing/landing.component";
 import { DocumentsComponent } from "./components/documents/documents.component"
 import { LoginComponent } from "./components/login/login.component"
+import { SummaryComponent} from "./components/summary/summary.component";
+import { ProfileComponent} from "./components/profile/profile.component";
+import {ContactsComponent} from "./components/contacts/contacts.component";
 
 //services
 import { TodosService } from './services/todos.service';
@@ -21,7 +24,10 @@ const routes: Routes = [
   { path: 'cibc', component: CibcComponent},
   { path: 'landing', component: LandingComponent},
   { path: 'documents', component: DocumentsComponent},
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+  { path: 'summary', component: SummaryComponent},
+  { path: 'profile', component: ProfileComponent},
+  { path: 'contacts', component: ContactsComponent}
 ];
 
 @NgModule({
